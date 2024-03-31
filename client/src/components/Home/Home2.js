@@ -27,7 +27,7 @@ function Home2() {
               <br />
               <br />I have developed in several different languages and Frameworks.
               <i>
-                <b className="blue"> Javascript, Java, VbScript, HTML and CSS </b>
+                <b className="blue"> Javascript, Java, VbScript, HTML and CSS. </b>
               </i>
               <br />
               <br />I enjoy most performing full stack development. &nbsp;
@@ -41,7 +41,7 @@ function Home2() {
               </i>
               &nbsp; like
               <i>
-                <b className="blue"> React.js and Node.js</b>
+                <b className="blue"> React.js and Node.js.</b>
               </i>
             </p>
           </Col>

@@ -12,13 +12,13 @@ function AboutCard() {
             originally from a farm in<span className="blue"> Wisconsin.</span>
             <br />
             <br />
-            Back in the day I went from farm boy to the Navy. I spent 10 years in the Navy. While in the Navy I started studying Electrical
+            Back in the day I went from farm boy to the Navy. I spent 10 years in the Navy. While, in the Navy I started studying Electrical
             Engineering but changed my Major to Computer Science. I completed{" "}
             <span className="blue">BGS degree at Eastern Connecticut State University</span>
             . Where I majored in Computer Science.
             <br />
             <br />
-            I then worked for various defense contractors supporting the Navy. This is where I learned programming with various languages and
+            I then worked for various defense contractors supporting the Navy. This is where I learned to program with various languages and
             frameworks.
             <br />
             <br />

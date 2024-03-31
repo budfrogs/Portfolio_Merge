@@ -31,7 +31,7 @@ function EditModal(props) {
 
     //console.log("windowLocation:", Window.location);
 
-    const response = await fetch("https://test.budfrogsdev.me:5010/movie/updateOne", requestOptions);
+    const response = await fetch("https://budfrogsdev.me:5005/movie/updateOne", requestOptions);
     if (!response.ok) {
       const message = `An error occurred: ${response.statusText}`;
       window.alert(message);
