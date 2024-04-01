@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Button, Form, InputGroup, Modal } from "react-bootstrap";
 
 function EditModal(props) {
-  const movie = props.editProps;
   const [show, setShow] = useState(false);
-  const [formData, setFormData] = useState(movie);
+  const [formData, setFormData] = useState({ movie: null });
 
   function handleChange(event) {
     setFormData((prevFormData) => {
@@ -16,22 +15,21 @@ function EditModal(props) {
     });
   }
 
+  const openModal = (_id, obj) => {
+    setFormData({ ...obj });
+    setShow(true); // Show the modal
+  };
+
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const handleSave = async () => {
     //add update call here!
-
-    setShow(false);
-
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     };
 
-    //console.log("windowLocation:", Window.location);
-
-    const response = await fetch("https://budfrogsdev.me:5005/movie/updateOne", requestOptions);
+    const response = await fetch("https://test.budfrogsdev.me:5010/movie/updateOne", requestOptions);
     if (!response.ok) {
       const message = `An error occurred: ${response.statusText}`;
       window.alert(message);
@@ -39,7 +37,7 @@ function EditModal(props) {
     }
 
     window.location.reload(true);
-
+    //setFormData("");
     return response.json();
   };
 
@@ -47,7 +45,7 @@ function EditModal(props) {
     <>
       <Button
         variant="primary"
-        onClick={handleShow}
+        onClick={() => openModal(props.movieId, props.editProps)}
       >
         Edit Movie
       </Button>

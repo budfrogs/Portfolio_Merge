@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient } = require("mongodb");
 const Db = process.env.ATLAS_URI;
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
@@ -15,7 +15,7 @@ module.exports = {
       console.error(e);
     }
 
-    _db = client.db('PortFolio');
+    _db = client.db("PortFolio");
 
     if (_db !== undefined) {
       return true;

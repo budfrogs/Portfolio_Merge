@@ -1,5 +1,6 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
 import Create from "./Create";
+import "./movieList.css";
 
 export default function Search(props) {
   const formData = props.formData;

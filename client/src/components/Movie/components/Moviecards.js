@@ -4,6 +4,7 @@ import EditModal from "./EditModal";
 
 export default function Moviecard(props) {
   const mov = props.cardObj;
+
   return (
     <Row className="g-0 justify-content-center">
       {mov.map((cardObj, idx) => (
@@ -15,7 +16,6 @@ export default function Moviecard(props) {
           xl={2}
           xxl={2}
         >
-          ``
           <Card className="h-100">
             <Card.Img
               variant="top"

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Search from "./Search";
 import Moviecard from "./Moviecards";
-import "./MovieList.css";
+import "./movieList.css";
 
 export default function MovieList() {
   const [movies, setMovies] = useState([]);
@@ -12,6 +12,12 @@ export default function MovieList() {
     cast: "",
     genres: "",
   });
+  const [moviesElements, setMoviesElements] = useState([]);
+  const [loadData, setLoadData] = useState(true);
+
+  // useEffect(() => {
+  //   console.log("useEffectLoadData: ", loadData);
+  // }, [loadData]);
 
   const handleChange = (e) => {
     setFormData((prevFormData) => {
@@ -29,17 +35,17 @@ export default function MovieList() {
         year: "",
         cast: "",
         genres: "",
+        cleared: true,
       };
     });
   }
-  const handleSubmit = async (e) => {
-    // async function handleSubmit(e) {
-    e.preventDefault();
 
+  const loadPage = async () => {
+    if (!loadData) return; //keep from continuously loading the page.
     // When a post request is sent to the create url, we'll add a new movie to the database.
     const newSearch = { ...formData };
 
-    const response = await fetch("https://budfrogsdev.me:5005/movie/search", {
+    const response = await fetch("https://test.budfrogsdev.me:5010/movie/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,31 +58,21 @@ export default function MovieList() {
       }
     });
 
-    //  console.log("href:", window.location.href);
-
     const newMovieList = await response.json();
 
     window.myObj = newMovieList;
     setMovies((prevMoveList) => newMovieList);
+    setLoadData(false);
     clearFormData();
   };
 
-  // This method will delete a movie
-  // async function deleteMovie(id) {
-  //   await fetch(`https://budfrogsdev.me:5005/${id}`, {
-  //     method: 'DELETE',
-  //   });
+  const handleSubmit = async (e) => {
+    // async function handleSubmit(e) {
+    e.preventDefault();
+    setLoadData(true);
+    loadPage();
+  };
 
-  //   const newMovies = movies.filter((el) => el._id !== id);
-  //   setMovies(newMovies);
-  // }
-
-  // const moviesElements = movies.map((cardObj) => (
-  //   <Moviecard
-  //     key={cardObj._id}
-  //     cardObj={cardObj}
-  //   />
-  // ));
   function card(movies) {
     return (
       <Moviecard
@@ -86,8 +82,10 @@ export default function MovieList() {
     );
   }
 
-  const moviesElements = card(movies);
-  // console.log(moviesElements);
+  useEffect(() => {
+    setMoviesElements((prevElements) => card(movies));
+  }, [movies]);
+
   const Header = () => {
     return (
       <div className="text-white text-center ">
@@ -100,10 +98,7 @@ export default function MovieList() {
   // This following section will display the table with the records of individuals.
   return (
     <div>
-      <Container
-        flex
-        className="mt-5 mb-5"
-      >
+      <Container className="mt-5 mb-5">
         <Header />
         <Search
           formData={formData}
