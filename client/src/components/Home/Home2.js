@@ -19,29 +19,31 @@ function Home2() {
             className="home-about-description"
           >
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="blue"> INTRODUCE </span> MYSELF
+              LET ME <span className="brown-text"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I am a web developer.
-              <br />I started a long time ago working on a Classic ASP website… 🤷‍♂️
+              I am a Full Stack Developer.
+              <br />
+              <br />I started a long time ago working on a website with Classic ASP. 🤷‍♂️ Then it was pushing data from the front end to backend with
+              <span className="brown-text">java servlets</span>. That required me then to work with SQL database and learn T-SQL.
               <br />
               <br />I have developed in several different languages and Frameworks.
               <i>
-                <b className="blue"> Javascript, Java, VbScript, HTML and CSS. </b>
+                <b className="brown-text"> React, Node, Javascript, Java, VbScript, HTML and CSS. </b>
               </i>
               <br />
               <br />I enjoy most performing full stack development. &nbsp;
               <i>
-                <b className="blue">Building frontend and backend web interfaces. </b>
+                <b className="brown-text">Building frontend and backend web interfaces with React. </b>
               </i>
               <br />
               <br />I enjoy learning new exciting technologies or interfaces. Most recently
               <i>
-                <b className="blue"> modern Javascript Library and Frameworks</b>
+                <b className="brown-text"> modern Javascript Library and Frameworks</b>
               </i>
               &nbsp; like
               <i>
-                <b className="blue"> React.js and Node.js.</b>
+                <b className="brown-text"> React.js and Node.js.</b>
               </i>
             </p>
           </Col>
@@ -65,7 +67,7 @@ function Home2() {
           >
             <h1>FIND ME ON</h1>
             <p>
-              Feel free to <span className="blue">connect </span>with me
+              Feel free to <span className="brown-text">connect </span>with me
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">

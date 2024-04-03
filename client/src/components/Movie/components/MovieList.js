@@ -45,7 +45,7 @@ export default function MovieList() {
     // When a post request is sent to the create url, we'll add a new movie to the database.
     const newSearch = { ...formData };
 
-    const response = await fetch("https://test.budfrogsdev.me:5010/movie/search", {
+    const response = await fetch("https://budfrogsdev.me:5005/movie/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

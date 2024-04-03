@@ -30,7 +30,7 @@ export default function Create() {
     // When a post request is sent to the create url, we'll add a new movie to the database.
     const newMovie = { ...formData };
 
-    await fetch("https://test.budfrogsdev.me:5010/movie/add", {
+    await fetch("https://budfrogsdev.me:5005/movie/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

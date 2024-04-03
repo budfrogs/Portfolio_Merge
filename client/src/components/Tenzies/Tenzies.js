@@ -16,8 +16,8 @@ export default function Tenzies() {
   const [count, setCount] = useState(0);
   const [timer, setTimer] = useState({
     firstClick: false,
-    startTime: new Date(),
-    endTime: new Date(),
+    startTime: Date.now(),
+    endTime: Date.now(),
     bestTime: localStorage.getItem("bestTime") ? localStorage.getItem("bestTime") : new Date(),
   });
 
@@ -30,8 +30,6 @@ export default function Tenzies() {
     }
   }, [dice]);
 
-  useEffect(() => {}, [tenzies]);
-
   function generateNewDie() {
     return {
       value: Math.ceil(Math.random() * 6),
@@ -42,13 +40,20 @@ export default function Tenzies() {
 
   function allNewDice() {
     const newDice = [];
+
     for (let i = 0; i < 10; i++) {
       newDice.push(generateNewDie());
     }
     return newDice;
   }
-
   function rollDice() {
+    console.log("timer: ", timer, " starttime: ", timer.startTime, " endtime: ", timer.endTime, " firstClick:", timer.firstClick);
+    // setTimer((oldTimer) => {
+    //   console.log("oldTimer:", oldTimer);
+    //   return (oldTimer.startTime = Date.now());
+    // });
+    // console.log("timer: ", timer.startTime);
+
     if (!tenzies) {
       setCount((oldCount) => oldCount + 1);
       setDice((oldDice) =>

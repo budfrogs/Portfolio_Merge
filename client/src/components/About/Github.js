@@ -9,7 +9,7 @@ function Github() {
         className="project-heading"
         style={{ paddingBottom: "20px" }}
       >
-        Days I <strong className="blue">Code</strong>
+        Days I <strong className="brown-text">Code</strong>
       </h1>
       <GitHubCalendar
         username="budfrogs"

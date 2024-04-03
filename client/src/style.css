@@ -11,12 +11,13 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: rgb(105, 105, 237);
+  --imp-text-color: #98716a
+  ;
 }
 /*remove after edits */
 
 
-.blue {
+.brown-text {
   color: var(--imp-text-color) !important;
 }
 
@@ -157,7 +158,7 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
+  height: 2.5em !important;
   width: 2.5em !important;
 }
 
@@ -283,17 +284,17 @@ button:focus {
 }
 
 .main-name {
-  color: blue;
+  color: #98716a;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: blue !important;
+  color: #98716a !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: blue !important;
+  color: #98716a !important;
 }
 
 @media (max-width: 767px) {
@@ -381,13 +382,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px blue;
+  box-shadow: 0 0 15px rgb(255, 255, 0);
 }
 
 .home-social-icons:hover {
   color: blue;
-  box-shadow: 0 0 5px blue;
-  text-shadow: 0 0 2px blue;
+  box-shadow: 0 0 5px rgb(255, 255, 0);
+  text-shadow: 0 0 2px rgb(255, 255, 0);
 }
 
 .social-icons {
@@ -449,7 +450,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: blue !important;
+  color: #98716a !important;
 }
 /* --------- */
 /* Projects */
