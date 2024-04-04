@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Die from "./components/Die";
 import { nanoid } from "nanoid";
 import Confetti from "react-confetti";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Timer from "./components/Timer";
 import "./Tenzies.css";
 /*
 
@@ -14,19 +15,60 @@ export default function Tenzies() {
   const [dice, setDice] = useState(allNewDice());
   const [tenzies, setTenzies] = useState(false);
   const [count, setCount] = useState(0);
-  const [timer, setTimer] = useState({
-    firstClick: false,
-    startTime: Date.now(),
-    endTime: Date.now(),
-    bestTime: localStorage.getItem("bestTime") ? localStorage.getItem("bestTime") : new Date(),
+  const [startTimer, setStartTimer] = useState(false);
+  const [totalTime, setTotalTime] = useState(0);
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60000);
+    const seconds = ((time % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  };
+
+  const getBestTime = () => {
+    const bestTimeFromStorage = localStorage.getItem("bestTime");
+    return bestTimeFromStorage ? formatTime(bestTimeFromStorage) : 86400;
+  };
+
+  const getBestRoll = () => {
+    const bestRollFromStorage = localStorage.getItem("bestRoll");
+    return bestRollFromStorage ? bestRollFromStorage : 100;
+  };
+
+  const [bestScores, setBestScores] = useState({
+    bestTime: getBestTime(),
+    bestRoll: getBestRoll(),
   });
 
-  React.useEffect(() => {
+  const handleStart = () => {
+    setStartTimer(true);
+  };
+
+  const handleStop = () => {
+    setStartTimer(false);
+  };
+
+  const handleTotalTime = (time) => {
+    setTotalTime(time);
+  };
+
+  useEffect(() => {
     const allHeld = dice.every((die) => die.isHeld);
     const firstValue = dice[0].value;
     const allSameValue = dice.every((die) => die.value === firstValue);
     if (allHeld && allSameValue) {
       setTenzies(true);
+
+      //check between total time and best time.  If total time is better than best time update best time.
+      if (totalTime < bestScores.bestTime) {
+        setBestScores((oldScores) => ({ ...oldScores, bestTime: totalTime }));
+        localStorage.setItem("bestTime", totalTime);
+      }
+
+      if (count < bestScores.bestRoll) {
+        setBestScores((oldScores) => ({ ...oldScores, bestRoll: count }));
+        localStorage.setItem("bestRoll", count);
+      }
+      handleStop();
     }
   }, [dice]);
 
@@ -46,14 +88,11 @@ export default function Tenzies() {
     }
     return newDice;
   }
-  function rollDice() {
-    console.log("timer: ", timer, " starttime: ", timer.startTime, " endtime: ", timer.endTime, " firstClick:", timer.firstClick);
-    // setTimer((oldTimer) => {
-    //   console.log("oldTimer:", oldTimer);
-    //   return (oldTimer.startTime = Date.now());
-    // });
-    // console.log("timer: ", timer.startTime);
 
+  function rollDice() {
+    if (!startTimer) {
+      handleStart();
+    }
     if (!tenzies) {
       setCount((oldCount) => oldCount + 1);
       setDice((oldDice) =>
@@ -68,15 +107,12 @@ export default function Tenzies() {
     }
   }
 
-  function manageTime() {}
-
   function holdDice(id) {
     setDice((oldDice) =>
       oldDice.map((die) => {
         return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
       })
     );
-    setTimer(manageTime());
   }
 
   const diceElements = dice.map((die) => (
@@ -94,9 +130,34 @@ export default function Tenzies() {
       <h1 className="title">Tenzies</h1>
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       <div>
-        <h3>Number of rolls: {count}</h3>
+        <Row
+          xs={1}
+          sm={1}
+          md={1}
+          xl={1}
+          xxl={1}
+        >
+          <Col>
+            <h6>
+              <b>Best Time: </b>
+              {getBestTime() === 86400 ? "Play for best time." : getBestTime()}
+            </h6>
+          </Col>
+          <Col>
+            <h6>
+              <b>Best Roll: </b>
+              {getBestRoll() === 100 ? "Play for best roll." : getBestRoll()}
+            </h6>
+          </Col>
+        </Row>
       </div>
-      {/* <div className="dice-container">{diceElements}</div> */}
+      <div>
+        <h3>Number of rolls: {count}</h3>
+        <Timer
+          start={startTimer}
+          onTotalTime={handleTotalTime}
+        />
+      </div>
       <Container className="dice-container ">
         {" "}
         <Row
