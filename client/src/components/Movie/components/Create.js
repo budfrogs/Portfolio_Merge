@@ -46,7 +46,7 @@ export default function Create() {
   return (
     <>
       <Button
-        className="mt-1"
+        className="mt-1 btn-animate"
         variant="primary"
         onClick={handleShow}
       >
@@ -140,12 +140,14 @@ export default function Create() {
         </Modal.Body>
         <Modal.Footer>
           <Button
+            className="btn-animate"
             variant="secondary"
             onClick={handleClose}
           >
             Close
           </Button>
           <Button
+            className="btn-animate"
             variant="primary"
             onClick={onSubmit}
           >

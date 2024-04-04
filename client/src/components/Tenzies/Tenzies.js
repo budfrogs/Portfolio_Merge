@@ -172,7 +172,7 @@ export default function Tenzies() {
         </Row>
       </Container>
       <button
-        className="roll-dice"
+        className="roll-dice btn-animate"
         onClick={rollDice}
       >
         {tenzies ? "New Game" : "Roll"}

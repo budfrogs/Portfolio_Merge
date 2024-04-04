@@ -25,6 +25,7 @@ function ResumeNew() {
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
+            className="btn-animate"
             variant="primary"
             href={pdf}
             target="_blank"

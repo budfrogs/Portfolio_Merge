@@ -44,6 +44,7 @@ function EditModal(props) {
   return (
     <>
       <Button
+        className="btn-animate"
         variant="primary"
         onClick={() => openModal(props.movieId, props.editProps)}
       >
@@ -139,12 +140,14 @@ function EditModal(props) {
         </Modal.Body>
         <Modal.Footer>
           <Button
+            className="btn-animate"
             variant="secondary"
             onClick={handleClose}
           >
             Close
           </Button>
           <Button
+            className="btn-animate"
             variant="primary"
             onClick={handleSave}
           >
