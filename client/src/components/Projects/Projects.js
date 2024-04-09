@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import movieImg from "../../Assets/Projects/movie.png";
-import tenzieImg from "../../Assets/Projects/tenzies.png";
+import movieImg from "../../Assets/Projects/movie.webp";
+import tenzieImg from "../../Assets/Projects/tenzies.webp";
 
 function Projects() {
   return (

@@ -6,9 +6,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Timer from "./components/Timer";
 import "./Tenzies.css";
 /*
-
-Track the time it took to win
-Save your best time ot localstorage.
 check other held dice and see if they match the one that was clicked. If not change to red dice
 */
 export default function Tenzies() {

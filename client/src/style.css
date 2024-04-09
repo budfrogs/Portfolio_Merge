@@ -260,7 +260,7 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-image: var(--image-gradient), url(./Assets/home-bg.webp);
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
@@ -429,7 +429,7 @@ button:focus {
   }
 }
 
-.footer h3 {
+.footer span {
   font-size: 1em;
   color: white !important;
   margin-top: 0.5em !important;

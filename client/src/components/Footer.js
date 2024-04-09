@@ -16,13 +16,13 @@ function Footer() {
           md="4"
           className="footer-copywright"
         >
-          <h3>Designed and Developed by Soumyajit Behera</h3>
+          <span>Designed and Developed by Soumyajit Behera</span>
         </Col>
         <Col
           md="4"
           className="footer-copywright"
         >
-          <h3>Copyright © {year} SB</h3>
+          <span>Copyright © {year} SB</span>
         </Col>
         <Col
           md="4"
@@ -35,6 +35,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="gitHub"
               >
                 <AiFillGithub />
               </a>
@@ -45,6 +46,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="twitter"
               >
                 <AiOutlineTwitter />
               </a>
@@ -55,6 +57,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="linkedin"
               >
                 <FaLinkedinIn />
               </a>
@@ -65,6 +68,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <AiFillInstagram />
               </a>
@@ -77,7 +81,7 @@ function Footer() {
           md="4"
           className="footer-copywright"
         >
-          <h3>Modified and Implemented by James Smith</h3>
+          <span>Modified and Implemented by James Smith</span>
         </Col>
         <Col></Col>
         <Col
@@ -91,6 +95,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <AiFillGithub />
               </a>
@@ -102,6 +107,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Linkedin"
               >
                 <FaLinkedinIn />
               </a>
@@ -112,6 +118,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <AiFillInstagram />
               </a>
