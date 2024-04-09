@@ -27,7 +27,7 @@ function Projects() {
               isBlog={false}
               title="Movie Search"
               description="Movie search page demonstrating the use of React.js and MongoDB"
-              ghLink="https://github.com/budfrogs/portfolio_mernstack"
+              ghLink="https://github.com/budfrogs"
               demoLink={"/movie"}
             />
           </Col>
@@ -41,7 +41,7 @@ function Projects() {
               isBlog={false}
               title="Tenzies Dice Game"
               description="This is the Tenzies Dice Game.  This project was part of a react course on Scrimba."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
+              ghLink="https://github.com/budfrogs"
               demoLink="/tenzies"
             />
           </Col>

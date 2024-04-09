@@ -16,6 +16,7 @@ function ProjectCards(props) {
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>{props.description}</Card.Text>
         <Button
+          className="btn-animate"
           variant="primary"
           href={props.ghLink}
           target="_blank"
@@ -30,6 +31,7 @@ function ProjectCards(props) {
 
         {!props.isBlog && props.demoLink && (
           <Button
+            className="btn-animate"
             variant="primary"
             href={props.demoLink}
             target="_self"

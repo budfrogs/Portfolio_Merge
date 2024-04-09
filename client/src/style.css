@@ -16,6 +16,29 @@ html {
 }
 /*remove after edits */
 
+/* CustomButtonStyles.css */
+
+/* Hover Effect */
+.btn-animate:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  background-color: #3d97f8; /* Change to desired hover color */
+}
+
+/* Focus Effect */
+.btn-animate:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); /* Bootstrap-like focus shadow */
+  outline: none; /* Removes the default focus outline */
+}
+
+/* Active (Pressed) Effect */
+.btn-animate:active {
+  background-color: #0056b3; /* Darker shade for active state */
+  transform: scale(0.98); /* Slightly smaller on press */
+  transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+
 
 .brown-text {
   color: var(--imp-text-color) !important;
@@ -264,11 +287,11 @@ button:focus {
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  padding-top: 0px !important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
+  padding: 2rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
 }
@@ -457,7 +480,7 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 60px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
 }
@@ -555,7 +578,7 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 60px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;

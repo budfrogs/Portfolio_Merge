@@ -77,6 +77,7 @@ export default function Search(props) {
           </Form.Group>
           <Form.Group as={Col}>
             <Button
+              className="btn-animate "
               variant="primary"
               type="submit"
             >
