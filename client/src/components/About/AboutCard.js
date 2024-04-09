@@ -19,15 +19,15 @@ function AboutCard() {
             also installed navigation systems on <span className="brown-text">foreign diesel submarines</span> around the world.
             <br />
             <br />I eventually moved on to another company where I started my first web development position. Here I grew into a{" "}
-            <span className="brown-text">Lead Developer</span> and a<span className="brown-text">Program Manager</span> for DOD contracts. I also
+            <span className="brown-text">Lead Developer</span> and a <span className="brown-text">Program Manager</span> for DOD contracts. I also
             completed a <span className="brown-text">BGS degree at Eastern Connecticut State University!</span>
             <br />
             <br />
             While a lead developer, I developed my skills as a <span className="brown-text">full stack developer</span>. Working with various
             languages and frameworks to include:
-            <span className="brown-text"> Classic ASP, HTML5, CSS, Bootstrap, JavaScript, jQuery, and Java</span>. As lead developer, I periodically
+            <span className="brown-text"> Classic ASP, HTML5, CSS, Bootstrap, JavaScript, jQuery, and Java</span>. As a lead developer, I periodically
             took on <span className="brown-text">Database Administration</span> work during staffing shortages. Through this experience I gained a lot
-            of knowledge from managing the front in the middleware and the backend software.
+            of knowledge from managing the front-end, the middleware, and the back-end software.
             <br />
             <br />
             As a <span className="brown-text">Program Manager</span>, I managed 5 DOD contracts. I was also responsible for the staff on each
