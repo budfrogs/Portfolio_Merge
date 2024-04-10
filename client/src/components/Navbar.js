@@ -38,6 +38,8 @@ function NavBar() {
             src={logo}
             className="img-fluid logo"
             alt="brand"
+            width={50}
+            height={50}
           />
         </Navbar.Brand>
         <Navbar.Toggle

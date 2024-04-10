@@ -56,6 +56,10 @@ function Home2() {
                 src={myImg}
                 className="img-fluid"
                 alt="avatar"
+                style={{ maxHeight: "450px" }}
+                width={356}
+                height={356}
+                loading="lazy"
               />
             </Tilt>
           </Col>

@@ -3,7 +3,7 @@
   <a href="https://budfrogsdev.me/" target="_blank">James Smith Portfolio</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img.png" />
+  <img alt="Demo" src="./Images/readme-img.webp" />
 </div>
 
 # React Base Movie Database Project

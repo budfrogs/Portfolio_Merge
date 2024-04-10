@@ -37,6 +37,9 @@ function About() {
               src={laptopImg}
               alt="about"
               className="img-fluid"
+              width={445}
+              height={305}
+              style={{ maxHeight: "445px" }}
             />
           </Col>
         </Row>

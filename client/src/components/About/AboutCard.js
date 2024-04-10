@@ -6,7 +6,7 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "left" }}>
             Hi Everyone,
             <br />I am <span className="brown-text">James Smith</span>. I grew up on a farm in <span className="brown-text">Wisconsin</span>. After
             highschool I joined the <span className="brown-text">Navy</span> and after 10 years I started my first civilian job with a Defense
