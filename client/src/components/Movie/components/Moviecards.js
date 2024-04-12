@@ -31,20 +31,28 @@ export default function Moviecard(props) {
                 <strong>Year:</strong> {cardObj.year}
               </Card.Text>
               <Card.Text>
-                <strong>Cast: </strong>
-                {typeof cardObj.cast === "undefined"
-                  ? ""
-                  : cardObj.cast.map((x, index) => {
-                      return cardObj.cast.length - 1 === index ? x : x + ",";
-                    })}
+                <strong>
+                  <u>Cast</u>{" "}
+                </strong>
+                <div>
+                  {typeof cardObj.cast === "undefined"
+                    ? ""
+                    : cardObj.cast.map((x, index) => {
+                        return cardObj.cast.length - 1 === index ? x : x + ", ";
+                      })}
+                </div>
               </Card.Text>
               <Card.Text>
-                <strong>Genre: </strong>
-                {typeof cardObj.genres === "undefined"
-                  ? ""
-                  : cardObj.genres.map((x, index) => {
-                      return cardObj.genres.length - 1 === index ? x : x + ",";
-                    })}
+                <strong>
+                  <u>Genre</u>
+                </strong>
+                <div>
+                  {typeof cardObj.genres === "undefined"
+                    ? ""
+                    : cardObj.genres.map((x, index) => {
+                        return cardObj.genres.length - 1 === index ? x : x + ", ";
+                      })}
+                </div>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="cardfooter text-center">

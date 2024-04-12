@@ -11,10 +11,10 @@ function Footer() {
       fluid
       className="footer"
     >
-      <Row>
+      <Row className="m-0 p-0">
         <Col
           md="4"
-          className="footer-copywright"
+          className="footer-name"
         >
           <span>Designed and Developed by Soumyajit Behera</span>
         </Col>
@@ -79,7 +79,7 @@ function Footer() {
       <Row className="m-0 p-0">
         <Col
           md="4"
-          className="footer-copywright"
+          className="footer-name"
         >
           <span>Modified and Implemented by James Smith</span>
         </Col>
@@ -100,7 +100,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">&nbsp;</li>
+            <li className="social-icons">&nbsp;&nbsp;&nbsp;&nbsp;</li>
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/james-smith-b3781512/"

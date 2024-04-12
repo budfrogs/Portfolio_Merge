@@ -5,9 +5,7 @@
     margin-right: auto;
     width: 50%;
   }
-  
-
-  
+    
   .movie-search, .cardfooter {
     background-color: cadetblue !important;
   }
@@ -15,5 +13,12 @@
   .create-label{
     width: 20% !important;
     background-color: cadetblue;
+  }
+/* Good to limit descriptions to certain number of lines.*/
+  .movie-card-text{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
   }
   

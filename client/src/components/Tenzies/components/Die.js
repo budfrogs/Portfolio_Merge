@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import "./die.css";
 
 const Pip = () => <span className="pip" />;
@@ -9,10 +9,16 @@ const Face = (props) => {
     backgroundColor: props.isHeld ? "#59E391" : "white",
   };
   return (
-    <Col className="m-0 p-0">
+    <Col
+      xs={4}
+      sm={3}
+      md={3}
+      xl={2}
+      className="m-0 p-0 "
+    >
       <div
         style={styles}
-        className="face"
+        className="face mx-auto"
         onClick={props.holdDice}
       >
         {props.pips}

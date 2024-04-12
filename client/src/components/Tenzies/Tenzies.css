@@ -12,14 +12,13 @@ body {
 
 main {
   background-color: #F5F5F5;
-  max-width: 800px;
+  max-width: 50rem;
   border-radius: 5px;
-  padding: 20px;
-  margin: 25px;
+  padding: 2rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
 }
 
 
@@ -35,22 +34,19 @@ main {
   text-align: center;
 }
 
-.dice-container {
-  display: flex;
-  /* grid-template: auto auto / repeat(5, 1fr); */
-  gap: 10px;
-}
+
 
 
 .roll-dice {
-  height: 50px;
-  width: 100px;
+  height: 3.5rem;
+  width: 5rem;
   border: none;
   border-radius: 6px;
   background-color: #5035FF;
   color: white;
   font-size: 1.1rem;
   font-family: 'Karla', sans-serif;
+  text-align: center;
 }
 
 .roll-dice:focus {

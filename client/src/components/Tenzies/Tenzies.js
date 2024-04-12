@@ -122,29 +122,29 @@ export default function Tenzies() {
   ));
 
   return (
-    <main className="mt-5 mb-5">
+    <main className="mt-5 mb-5 mx-auto">
       {tenzies && <Confetti />}
       <h1 className="title">Tenzies</h1>
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       <div>
         <Row
-          xs={1}
-          sm={1}
-          md={1}
-          xl={1}
-          xxl={1}
+          xs={2}
+          sm={2}
+          md={2}
+          xl={2}
+          className="justify-content-center"
         >
-          <Col>
-            <h6>
+          <Col className="w-auto">
+            <span>
               <b>Best Time: </b>
               {getBestTime() === 86400 ? "Play for best time." : getBestTime()}
-            </h6>
+            </span>
           </Col>
-          <Col>
-            <h6>
+          <Col className="w-auto">
+            <span>
               <b>Best Roll: </b>
               {getBestRoll() === 100 ? "Play for best roll." : getBestRoll()}
-            </h6>
+            </span>
           </Col>
         </Row>
       </div>
@@ -155,25 +155,17 @@ export default function Tenzies() {
           onTotalTime={handleTotalTime}
         />
       </div>
-      <Container className="dice-container ">
-        {" "}
-        <Row
-          className="justify-content-center "
-          xs={3}
-          sm={3}
-          md={5}
-          xl={5}
-          xxl={5}
-        >
-          {diceElements}
-        </Row>
+      <Container className="fluid  w-auto ">
+        <Row>{diceElements}</Row>
       </Container>
-      <button
-        className="roll-dice btn-animate"
-        onClick={rollDice}
-      >
-        {tenzies ? "New Game" : "Roll"}
-      </button>
+      <div>
+        <button
+          className="roll-dice btn-animate"
+          onClick={rollDice}
+        >
+          {tenzies ? "New Game" : "Roll"}
+        </button>
+      </div>
     </main>
   );
 }
