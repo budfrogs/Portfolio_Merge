@@ -15,10 +15,6 @@ export default function MovieList() {
   const [moviesElements, setMoviesElements] = useState([]);
   const [loadData, setLoadData] = useState(true);
 
-  // useEffect(() => {
-  //   console.log("useEffectLoadData: ", loadData);
-  // }, [loadData]);
-
   const handleChange = (e) => {
     setFormData((prevFormData) => {
       return {
@@ -41,8 +37,7 @@ export default function MovieList() {
   }
 
   const loadPage = async () => {
-    if (!loadData) return; //keep from continuously loading the page.
-    // When a post request is sent to the create url, we'll add a new movie to the database.
+    if (!loadData) return;
     const newSearch = { ...formData };
 
     const response = await fetch("https://budfrogsdev.me:5005/movie/search", {

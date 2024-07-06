@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillGithub, AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub, AiOutlineTwitter, AiFillInstagram, AiOutlineYoutube } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
@@ -100,7 +100,17 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li className="social-icons">
+              <a
+                href="https://www.youtube.com/@JimSmithBrazil"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="youtube"
+              >
+                <AiOutlineYoutube />
+              </a>
+            </li>
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/james-smith-b3781512/"

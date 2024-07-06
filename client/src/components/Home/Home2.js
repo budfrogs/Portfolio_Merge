@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/people_dev.svg";
 import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaYoutubeSquare } from "react-icons/fa";
 
 function Home2() {
   return (
@@ -83,6 +83,17 @@ function Home2() {
                   aria-label="github"
                 >
                   <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.youtube.com/@JimSmithBrazil"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                  aria-label="youtube"
+                >
+                  <FaYoutubeSquare />
                 </a>
               </li>
               <li className="social-icons">
